@@ -14,9 +14,10 @@ def tetrahedron_volume(b):
     volume = (b ** 3 / (6 * math.sqrt(2)))
     return round(volume, 2)
 
-# Perform calculations
+# Get result of calculations
 get_volume = cube_volume(a)
 get_tetrahedron = tetrahedron_volume(b)
 
+# Print result
 print(f'The volume of your cube is {get_volume} cm')
 print(f'The volume of your tedrahedron is {get_tetrahedron} cm')
