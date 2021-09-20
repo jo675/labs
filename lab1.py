@@ -1,6 +1,5 @@
 import math
 
-
 def cube_volume():
     """
     Calculate the volume of a cube
