@@ -1,5 +1,5 @@
 import math
-from typing import Text
+
 
 def cube_volume():
     """
