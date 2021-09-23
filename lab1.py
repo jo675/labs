@@ -49,6 +49,7 @@ def show_menu():
     print('                 WELCOME                    ')
     print('Press 1. Calculate the volume of a cube'     )
     print('Press 2. Calculate the volume of tetrahedron')
+    print('============================================')
 
 show_menu()
 while True:
