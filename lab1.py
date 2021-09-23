@@ -38,8 +38,11 @@ def ask_user():
     """
     Ask user what to calculate.
     """
-    choice = input('select: ') 
-    return choice
+    try:
+        choice = input('select: ') 
+        return choice
+    except:
+        return 0
 
 def show_menu():
     print('============================================')
