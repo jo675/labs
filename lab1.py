@@ -1,7 +1,7 @@
 import math
 
 calculations = 0
-total_area = 0
+total_volume= 0
 choice =''
 
 def number_of_calculations():
@@ -11,12 +11,12 @@ def number_of_calculations():
     global calculations
     calculations += 1
 
-def total_area_calculated(area):
+def total_volume_calculated(volume):
     """
-    Total area appended.
+    Total volume appended.
     """
-    global total_area
-    total_area += area
+    global total_volume
+    total_volume += volume
 
 def cube_volume():
     """
@@ -57,13 +57,13 @@ while True:
         x = cube_volume()
         print(f'The volume of your cube is {x} cm^3\n')
         number_of_calculations()
-        total_area_calculated(x)
+        total_volume_calculated(x)
     
     elif choice == '2':
         y = tetrahedron_volume()
         print(f'The volume of your tedrahedron is {y} cm^3\n')
         number_of_calculations()
-        total_area_calculated(y)
+        total_volume_calculated(y)
         
     elif choice == 'Q':
         print('Good bye')
@@ -72,4 +72,4 @@ while True:
         print('wrong option')
 
     print(f'You have made calculations: {calculations}')
-    print(f'Your total area calculated: {total_area}')
+    print(f'Your total area calculated: {total_volume}')
