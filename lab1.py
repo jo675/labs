@@ -1,8 +1,26 @@
 import math
 
+calculations = 0
+total_area = 0
+choice =''
+
+def number_of_calculations():
+    """
+    Increment calculations.
+    """
+    global calculations
+    calculations += 1
+
+def total_area_calculated(area):
+    """
+    Total area appended.
+    """
+    global total_area
+    total_area += area
+
 def cube_volume():
     """
-    Calculate the volume of a cube
+    Calculate the volume of a cube.
     """
     a = eval(input("Enter side of cube in cm "))
     volume = a**3
@@ -10,23 +28,45 @@ def cube_volume():
 
 def tetrahedron_volume():
     """
-    Calculate the volume of a tedrahedron
+    Calculate the volume of a tedrahedron.
     """
     b = eval(input("Enter side of tetrahedron in cm "))
     volume = (b ** 3 / (6 * math.sqrt(2)))
     return round(volume, 2)
 
+def ask_user():
+    """
+    Ask user what to calculate.
+    """
+    choice = input('select: ') 
+    return choice
+
+def show_menu():
+    print('============================================')
+    print('                 WELCOME                    ')
+    print('Press 1. Calculate the volume of a cube'     )
+    print('Press 2. Calculate the volume of tetrahedron')
+
+show_menu()
 while True:
-    print('Press 1 if you want to calculate volume of cube\nPress 2 if you want to calculate volume of tetrahedron\nPress Q if you want to quit\n')
-    x = input('select: ')
-    if x == '1':
-        y = cube_volume()
-        print(f'The volume of your cube is {y} cm^3\n')
-    elif x == '2':
-        z = tetrahedron_volume()
-        print(f'The volume of your tedrahedron is {z} cm^3\n')
-    elif x == 'Q':
+    choice = ask_user()
+    if choice == '1':
+        x = cube_volume()
+        print(f'The volume of your cube is {x} cm^3\n')
+        number_of_calculations()
+        total_area_calculated(x)
+    
+    elif choice == '2':
+        y = tetrahedron_volume()
+        print(f'The volume of your tedrahedron is {y} cm^3\n')
+        number_of_calculations()
+        total_area_calculated(y)
+        
+    elif choice == 'Q':
         print('Good bye')
         break
     else:
         print('wrong option')
+
+    print(f'You have made calculations: {calculations}')
+    print(f'Your total area calculated: {total_area}')
