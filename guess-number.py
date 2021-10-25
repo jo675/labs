@@ -27,6 +27,7 @@ def play_again():
     if play == 'N':
         sys.exit() 
 
+show_menu()
 print('Guess the magic number\nYou have 5 chances')
 while True:
     guess()
