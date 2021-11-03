@@ -28,8 +28,6 @@ Dropbear is a relatively small SSH server and client. It runs on a variety of un
 
 ## Tech
 
-Dillinger uses a number of open source projects to work properly:
-
 - [Dropbear SSH] - lightweight SSH server
 
 ## Installation
