@@ -58,7 +58,7 @@ def show_result():
 
     wrong = get_wrong_answers(user_answers, correct_answers)
     for i in wrong:
-        print(f'You answered question {i} incorrectly')
+        print(f'You answered question {i+1} incorrectly')
 
 menu()
 ask_questions()
