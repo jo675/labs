@@ -38,7 +38,15 @@ def get_score(user_answers, correct_answers):
             score.append(1)
     return sum(score)
 
+def get_wrong_answers(user_answers, correct_answers):
+    wrong_answers = []
+    for i in range(4):
+        if user_answers[i] != correct_answers[i]:
+            wrong_answers.append(i)
+    return wrong_answers
+
 def show_result():
+    print('================ SCOREBOARD ====================')
     """show user the result of quiz and if passed or failed"""
     total_score = get_score(user_answers, correct_answers)
     print(f'Your score is {total_score}')
@@ -47,6 +55,10 @@ def show_result():
         print('you pass the quiz')
     elif total_score < 3:
         print('you fail the quiz')
+
+    wrong = get_wrong_answers(user_answers, correct_answers)
+    for i in wrong:
+        print(f'You answered question {i} incorrectly')
 
 menu()
 ask_questions()
