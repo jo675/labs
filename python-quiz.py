@@ -20,15 +20,16 @@ def ask_questions():
     """ask question from user"""
     for question in questions:
         print(question)
-        try:
-            user_answers.append(int(input()))
-        except ValueError:
-            user_answers.pop            
-            print('wrong option, please enter a number')
-            print(question)
-            user_answers.append(int(input()))
-            
-                          
+        while True:
+            try:
+                user_answers.append(int(input()))
+                break
+            except ValueError:
+                user_answers.pop            
+                print('wrong option, please enter a number')
+                print(question)
+                pass
+                        
 def get_score(user_answers, correct_answers):
     """compare the answers from the user with correct answers"""
     score = []
