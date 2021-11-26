@@ -46,8 +46,8 @@ def get_wrong_answers(user_answers, correct_answers):
     return wrong_answers
 
 def show_result():
-    print('================ SCOREBOARD ====================')
     """show user the result of quiz and if passed or failed"""
+    print('================ SCOREBOARD ====================')
     total_score = get_score(user_answers, correct_answers)
     print(f'Your score is {total_score}')
 
