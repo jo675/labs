@@ -1,3 +1,5 @@
+#advent of code 2021, day
+#part 1
 f = open("input", "r")
 
 l = [int(x.strip()) for x in f]
