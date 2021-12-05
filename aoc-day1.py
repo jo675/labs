@@ -11,3 +11,12 @@ for i in range(len(l)-1):
 
 print(count)
 #count=1681
+
+#part 2
+count2 = 0
+for i in range(len(l)-3):
+    if l[i+3] > l[i]:
+        count2+=1
+    
+print(count2)
+#count2=1704
