@@ -1,4 +1,4 @@
-# advent of code, day2
+# advent of code 2021, day2
 f = open('input', 'r')
 
 l = [x.split() for x in f]
