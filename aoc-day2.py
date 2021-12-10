@@ -15,7 +15,7 @@ for count, value in enumerate(l):
     elif l[count][0] == 'down':
         depth += int(l[count][1])
 
-result=horizontal_position*depth
+result = horizontal_position * depth
 print(result)
 #result=1480518
 
