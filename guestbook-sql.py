@@ -105,31 +105,26 @@ while True:
     except ValueError:
         print('Please enter number 1 - 5. Exited')
         sys.exit()
-
     if choice == 1:
         show_gb()
-
     if choice == 2:
         try:
             name, message = check_input()
         except TypeError:
             continue
-        add_to_gb(name, message)
-        
+        add_to_gb(name, message)        
     if choice == 3:
         name = input('Please enter name to delete: ')
         if not name:
             print('You have to enter a name')
             continue
         delete_from_gb(name)
-
     if choice == 4:
         try:
             name, message = check_input()
         except TypeError:
             continue 
-        update_gb(name, message)
-  
+        update_gb(name, message)  
     if choice == 5:
         print('Bye') 
         sys.exit()
